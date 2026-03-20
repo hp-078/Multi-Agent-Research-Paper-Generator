@@ -1,4 +1,4 @@
-# Multi-Agent Research Paper Generator (Groq API)
+# Multi-Agent Research Paper Generator (Groq API + LangGraph)
 
 This project generates a complete research paper from a topic using a 5-agent pipeline:
 
@@ -8,11 +8,14 @@ This project generates a complete research paper from a topic using a 5-agent pi
 4. Critic
 5. Editor
 
+The supervisor orchestration is implemented with LangGraph.
+
 ## Features
 
 - Topic input from Streamlit UI
 - Web research using DuckDuckGo
 - Draft generation with Groq LLM via OpenAI-compatible SDK
+- LangGraph state graph orchestration for reliable stage execution
 - Strict critical review with score and feedback
 - Final polished markdown paper
 - Download final paper as `.md`
@@ -25,6 +28,10 @@ This project generates a complete research paper from a topic using a 5-agent pi
 - `prompts/`
 - `.env`
 - `requirements.txt`
+
+Key dependency additions:
+
+- `langgraph` for graph-based agent orchestration
 
 ## Setup
 
